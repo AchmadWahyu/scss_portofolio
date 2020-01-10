@@ -1,0 +1,43 @@
+@mixin easeInOut {
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin background{
+    @if $show-home-image{
+        &#bg-img{
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        &::after{
+            content:'';
+            position: absolute;
+            right:0;
+            top:0;
+            height:140vh;
+            width:100%;
+            background: (rgba($primary-color, $background-opacity));
+            z-index: -1;
+        }
+    }
+}
+
+@mixin respond-to($breakpoint) {
+    $raw-query:map-get($breakpoints , $breakpoint );
+
+    @if $raw-query {
+        $query: if(
+            type-of($raw-query) == 'string',
+            unquote($raw-query),
+            inspect($raw-query)
+        );
+
+        @media #{$query}{
+            @content;
+        }
+    }
+    @else{
+        @error 'No value found for `#{$breakpoint}`. '
+        + 'Please make sure it is defined in `$breakpoints` map.';
+    }    
+}

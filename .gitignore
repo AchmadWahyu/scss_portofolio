@@ -1,0 +1,4 @@
+node_modules/*
+vim.exe.stackdump
+package.json
+package-lock.json

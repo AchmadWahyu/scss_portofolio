@@ -1,0 +1,53 @@
+.btn {
+  display: block;
+  padding: 5px 5px;
+  color: white;
+  background-color: $primary-color;
+  margin: 10px;
+  text-align: center;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+.btn--grey {
+  @extend .btn;
+  margin: 10px 0;
+  background-color: grey;
+}
+.btn--black {
+  @extend .btn;
+  margin: 10px 0;
+  background-color: black;
+}
+
+.menu__btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include easeInOut;
+
+  .btn__line {
+    background-color: white;
+    height: 3px;
+    width: 28px;
+    margin-bottom: 5px;
+    @include easeInOut;
+  }
+
+  &.close {
+    .btn__line {
+      &:nth-child(1) {
+        transform: rotate(225deg) translate(-7px, -1px);
+      }
+      &:nth-child(2) {
+        transform: rotate(225deg);
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(325deg) translate(10px, -5px);
+      }
+    }
+  }
+}

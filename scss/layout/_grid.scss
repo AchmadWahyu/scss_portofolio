@@ -1,0 +1,44 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  grid-template-areas:
+    "lt"
+    "mt"
+    "rt"
+    "lb"
+    "mb"
+    "rb";
+  @include respond-to("large") {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "lt mt rt"
+      "lb mb rb";
+  }
+
+  &-about {
+    @include respond-to("large") {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "lt rt rt"
+        "lb mb rb";
+    }
+  }
+
+  &-work{
+    @include respond-to("medium") {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "lt mt"
+        "rt lb"
+        "mb rb";
+    }
+
+    @include respond-to("large") {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "lt mt rt"
+        "lb mb rb";
+    }
+  }
+}

@@ -1,0 +1,23 @@
+$primary-color: #710b04;
+$secondary-color: rgb(32, 190, 238);
+$show-home-image: true;
+$home-image: url(/dist/img/background.jpg);
+$profile-image: url(/dist/img/portrait_bg.jpg);
+$background-opacity: 0.9;
+$font-primary: sans-serif;
+$font-secondary: serif;
+
+/* set base values */
+$text-base-size: 1em; //16 px
+$text-scale-ratio: 1.2;
+$breakpoints: (
+  "medium": (
+    min-width: 426px
+  ),
+  "large": (
+    min-width: 769px
+  ),
+  "huge": (
+    min-width: 1025px
+  )
+);

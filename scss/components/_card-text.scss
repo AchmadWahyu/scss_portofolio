@@ -1,0 +1,6 @@
+.card-text{
+    background-color: lighten($primary-color, 2);
+    text-align: center;
+    padding:10px;
+    border-bottom:3px solid $secondary-color;
+}

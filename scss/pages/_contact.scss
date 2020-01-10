@@ -1,0 +1,22 @@
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .contact {
+    @include easeInOut;
+    margin: 20px;
+    font-size: 1.5em;
+    padding: 20px 30px;
+    display: block;
+    border: 2px solid rgb(44, 41, 41);
+
+    &:hover{
+        @include easeInOut;
+        background-color: $secondary-color;
+        color: set-text-color($secondary-color);
+        padding: 10px 15px;
+    }
+  }
+}

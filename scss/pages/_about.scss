@@ -1,0 +1,18 @@
+img {
+  border-radius: 50%;
+  grid-area: lt;
+  border: 3px solid $secondary-color;
+  margin:0 auto;
+}
+.bio {
+  grid-area: rt;
+}
+.job1 {
+  grid-area: lb;
+}
+.job2 {
+  grid-area: mb;
+}
+.job3 {
+  grid-area: rb;
+}

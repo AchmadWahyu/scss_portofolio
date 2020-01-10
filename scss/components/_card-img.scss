@@ -1,0 +1,12 @@
+.card-img{
+    img{
+        display:block;
+        width:100%;
+        border-radius: 0;
+        @include easeInOut;
+        &:hover{
+            opacity:0.5;
+            @include easeInOut;
+        }
+    }
+}
